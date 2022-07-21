@@ -62,7 +62,7 @@ class HeaderWidget extends StatelessWidget {
                   child: Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: TextStyles().regularOpenSans(
+                    style: TextStyles().semiboldOpenSans(
                       20,
                       AppColor.black11142D,
                     ),

@@ -9,6 +9,10 @@ class AppConstant {
   static EventKey eventKey = EventKey();
 }
 
+class SQLiteDatabaseConstant {
+  static String itemToSell = 'ItemToSell';
+}
+
 class NameFont {
   static String openSans = 'OpenSans';
 }

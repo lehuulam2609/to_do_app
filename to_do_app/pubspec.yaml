@@ -41,6 +41,7 @@ dependencies:
   hive: 2.1.0
   mime: any
   move_to_background: any
+  sqflite: any
 
 
 dev_dependencies:

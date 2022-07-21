@@ -5,12 +5,12 @@ import 'package:to_do_app/utils/app_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:to_do_app/utils/app_style.dart';
-import 'package:to_do_app/views/buy/buy_view_model.dart';
 import 'package:to_do_app/views/buy/widgets/item_order_widget.dart';
 import 'package:to_do_app/views/call/widgets/header_widget.dart';
 import 'dart:io';
+import 'package:to_do_app/views/sell/sell_view_model.dart';
 
-class BuyView extends GetWidget<BuyViewModel> {
+class SellView extends GetWidget<SellViewModel> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -40,7 +40,7 @@ class BuyView extends GetWidget<BuyViewModel> {
                   child: Column(
                     children: [
                       /// Header
-                      HeaderWidget(title: LanguageKey.buyListText.tr),
+                      HeaderWidget(title: LanguageKey.sellListText.tr),
 
                       /// Body
                       Expanded(

@@ -22,4 +22,14 @@ class OrderModel {
       type: int.tryParse((json['type'] ?? '').toString()),
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "id": id,
+      "name": name,
+      "price": price,
+      "quantity": quantity,
+      "type": type,
+    };
+  }
 }

@@ -17,9 +17,13 @@ EventBus eventBus = EventBus();
 
 Future<void> runMyApp() async {
   WidgetsFlutterBinding.ensureInitialized();
-  String dir = await _findLocalPath();
+  /// Hive Init
+  String dir = await findLocalPath();
   Hive.init(dir);
   await Hive.openBox(EventKey.hiveDB);
+  /// SqLite Init
+  
+
   await AppServices.initServices();
 
   final authRepo = AuthRepoImpl(authLocalStorage: Get.find());
@@ -44,7 +48,7 @@ Future<void> runMyApp() async {
   );
 }
 
-Future<String> _findLocalPath() async {
+Future<String> findLocalPath() async {
   String externalStorageDirPath = '';
   if (Platform.isAndroid) {
     try {

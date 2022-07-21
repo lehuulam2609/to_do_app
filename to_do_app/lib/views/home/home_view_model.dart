@@ -29,6 +29,6 @@ class HomeViewModel extends BaseViewModel {
 
   /// Navigate Sell
   void navigateSell() {
-    
+    Get.toNamed(Routes.SELL);
   }
 }
