@@ -1,0 +1,71 @@
+name: to_do_app
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: 4.1.4
+  dio: any
+  rxdart: any
+  shared_preferences: ^0.5.12
+  connectivity: any
+  carousel_slider: ^3.0.0
+  swipedetector: ^1.2.0
+  fluttertoast: ^8.0.3
+  cupertino_icons: ^1.0.2
+  event_bus: any
+  permission_handler: any
+  flutter_spinkit: any
+  url_launcher: any
+  cached_network_image: any
+  image_picker: any
+  translator: any
+  flutter_webview_plugin: any
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  enum_to_string: any
+  http: any
+  todo: any
+  # image_downloader: any
+  network_to_file_image: 2.3.8
+  progressive_image: any
+  wakelock: any
+  onesignal_flutter: 3.3.0
+  uuid: any
+  hive: 2.1.0
+  mime: any
+  move_to_background: any
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+
+  assets:
+      - assets/icons/
+      - assets/icons/2.0x/
+      - assets/icons/3.0x/
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/OpenSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          weight: 700
