@@ -23,7 +23,13 @@ class EnglishLanguage {
       LanguageKey.toCallButton: 'To Call',
       LanguageKey.toBuyButton: 'To Buy',
       LanguageKey.toSellButton: 'To Sell',
-      LanguageKey.callListText: 'Call List'
+      LanguageKey.callListText: 'Call List',
+      LanguageKey.buyListText: 'Buy List',
+      LanguageKey.sellListText: 'Sell List',
+
+      LanguageKey.nameText: 'Name: ',
+      LanguageKey.priceText: 'Price: ',
+      LanguageKey.quantityText: 'Quantity: ',
     };
   }
 }

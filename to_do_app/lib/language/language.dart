@@ -23,6 +23,12 @@ class LanguageKey {
   static const toBuyButton = 'to_buy_button';
   static const toSellButton = 'to_sell_button';
   static const callListText = 'call_list_text';
+  static const buyListText = 'buy_list_text';
+  static const sellListText = 'sell_list_text';
+
+  static const nameText = 'name_text';
+  static const priceText = 'price_text';
+  static const quantityText = 'quantity_text';
 }
 
 class Language extends Translations {

@@ -70,7 +70,7 @@ class ItemContactWidget extends StatelessWidget {
         /// Line
         Container(
           height: 1,
-          color: AppColor.shadow15,
+          color: AppColor.shadow,
         ),
       ],
     );

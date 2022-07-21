@@ -1,16 +1,18 @@
 import 'package:to_do_app/language/language.dart';
 import 'package:to_do_app/models/remote/contact_model.dart';
-import 'package:to_do_app/views/call/call_view_model.dart';
 import 'package:move_to_background/move_to_background.dart';
+import 'package:to_do_app/models/remote/order_model.dart';
 import 'package:to_do_app/utils/app_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:to_do_app/utils/app_style.dart';
+import 'package:to_do_app/views/buy/buy_view_model.dart';
+import 'package:to_do_app/views/buy/widgets/item_order_widget.dart';
 import 'package:to_do_app/views/call/widgets/header_widget.dart';
 import 'package:to_do_app/views/call/widgets/item_contact_widget.dart';
 import 'dart:io';
 
-class CallView extends GetWidget<CallViewModel> {
+class BuyView extends GetWidget<BuyViewModel> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -40,7 +42,7 @@ class CallView extends GetWidget<CallViewModel> {
                   child: Column(
                     children: [
                       /// Header
-                      HeaderWidget(title: LanguageKey.callListText.tr),
+                      HeaderWidget(title: LanguageKey.buyListText.tr),
 
                       /// Body
                       Expanded(
@@ -48,11 +50,11 @@ class CallView extends GetWidget<CallViewModel> {
                           () => ListView.builder(
                             padding: EdgeInsets.zero,
                             physics: AlwaysScrollableScrollPhysics(),
-                            itemCount: controller.listContacts.value.length,
+                            itemCount: controller.listOrders.value.length,
                             itemBuilder: (BuildContext context, int index) {
-                              final ContactModel item =
-                                  controller.listContacts.value[index];
-                              return ItemContactWidget(item: item);
+                              final OrderModel item =
+                                  controller.listOrders.value[index];
+                              return ItemOrderWidget(item: item);
                             },
                           ),
                         ),

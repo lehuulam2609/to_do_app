@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_app/core/viewmodel/base_viewmodel.dart';
 import 'package:get/get.dart';
-import 'package:to_do_app/models/remote/contact_model.dart';
+import 'package:to_do_app/models/remote/order_model.dart';
 import 'package:to_do_app/services/api/to_do_api.dart';
 import 'package:to_do_app/utils/app_helper.dart';
 
-class CallViewModel extends BaseViewModel {
+class BuyViewModel extends BaseViewModel {
   final ToDoApi toDoApi;
-  CallViewModel({
+  BuyViewModel({
     @required this.toDoApi,
   });
 
   Rx<bool> isLoading = Rx<bool>(false);
-  Rx<List<ContactModel>> listContacts = Rx<List<ContactModel>>([]);
+  Rx<List<OrderModel>> listOrders = Rx<List<OrderModel>>([]);
 
   @override
   void onInit() async {
     super.onInit();
     /// Get List Api
-    this.getListContactsApi();
+    this.getListOrdersApi();
   }
 
   @override
@@ -27,18 +27,18 @@ class CallViewModel extends BaseViewModel {
   }
 
   //////////////////////////////////////////////////////
-  /// Get List Contacts
+  /// Get List Order
   //////////////////////////////////////////////////////
-  void getListContactsApi() async {
+  void getListOrdersApi() async {
     isLoading(true);
-    var response = await toDoApi.getListContacts();
+    var response = await toDoApi.getListOrders();
     isLoading(false);
     if (response.hasError == true) {
       if ((response.errors ?? []).length > 0) {
         AppHelper.showError(response.errors.first.message ?? '');
       }
     } else {
-      listContacts.value = response?.response ?? [];
+      listOrders.value = response?.response ?? [];
     }
   }
 }
