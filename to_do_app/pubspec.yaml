@@ -25,7 +25,6 @@ dependencies:
   cached_network_image: any
   image_picker: any
   translator: any
-  flutter_webview_plugin: any
   flutter_localizations:
     sdk: flutter
   intl: any
